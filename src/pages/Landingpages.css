@@ -1,0 +1,347 @@
+/* === VARIABEL WARNA UNTUK TEMA === */
+:root {
+    --bg-color: #0b0b0b; /* Warna backgroundnya nya default dark (gelap) */
+    --text-color: #ffffff; /* Warna teks nya default (putih) */
+    --card-bg: #1a1a1a; /* Warna backgroundnya nya kartu (gelap) */
+    --nav-bg: #0b0b0b; /* Warna backgroundnya nya navbar (gelap) */
+    --primary-color: #ff5722; /* Warna oranye aksen */
+    --border-color: #333333; /* Warna border (gelap) */
+    --badge-bg: #332200; /* Warna badge (gelap) */
+    --badge-text: #ffcc00; /* Warna teks badge (gelap) */
+    --faq-bg: #151515; /* Warna FAQ (gelap) */
+}
+
+.landing-wrapper.lightmode {
+    --bg-color: #f9f9f9; /* Warna backgroundnya nya mode terang */
+    --text-color: #333333; /* Warna teks mode terang */
+    --card-bg: #ffffff; /* Warna backgroundnya kartu mode terang */
+    --nav-bg: #ffffff; /* Warna backgroundnya navbar mode terang */
+    --border-color: #e0e0e0; /* Warna border mode terang */
+    --badge-bg: #fff9e6; /* Warna badge mode terang */
+    --badge-text: #b8860b; /* Warna teks badge mode terang */
+    --faq-bg: #ffffff; /* Warna FAQ mode terang */
+}
+
+/* === STYLE DASAR === */
+* {
+    margin: 0; /* Untuk menghapus margin default */
+    padding: 0; /* Untuk menghapus padding default */
+    box-sizing: border-box; /* Mengatur box-sizing agar padding tidak menambah lebar */
+    font-family: 'Inter', sans-serif; /* Menggunakan font Inter */
+}
+
+body {
+    background-color: var(--bg-color); /* Menerapkan warna backgroundnya */
+    color: var(--text-color); /* Menerapkan warna teks */
+    transition: background-color 0.3s, color 0.3s; /* Animasi transisi saat ganti tema */
+}
+
+.landing-wrapper {
+    background-color: var(--bg-color); /* Menerapkan warna backgroundnya */
+    color: var(--text-color); /* Menerapkan warna teks */
+    min-height: 100vh; /* Tinggi minimal layar penuh */
+    display: flex; /* Menggunakan flexbox */
+    flex-direction: column; /* Mengatur arah flex menjadi kolom */
+}
+
+/* === NAVBAR === */
+.navbar {
+    display: flex; /* Menggunakan flexbox */
+    justify-content: space-between; /* Menyebar item secara merata */
+    align-items: center; /* Mengatur item rata tengah vertikal */
+    padding: 20px 50px; /* Padding atas-bawah uk 20px, kiri-kanan uk 50px */
+    background-color: var(--nav-bg); /* Warna backgroundnya navbar */
+    border-bottom: 1px solid var(--border-color); /* Garis bawah tipis */
+}
+
+.navbar-logo img {
+    height: 40px; /* Tinggi logo  uk 40px */
+}
+
+.nav-menu {
+    display: flex; /* Menggunakan flexbox */
+    gap: 30px; /* Jarak antar menu uk 30px */
+}
+
+.nav-menu a {
+    color: var(--text-color); /* Warna teks menu */
+    text-decoration: none; /* Menghapus garis bawah pada link */
+    font-size: 14px; /* Ukuran font  uk 14px */
+    font-weight: 500; /* Ketebalan font uk medium */
+}
+
+.nav-menu a.active {
+    color: var(--primary-color); /* Warna oranye untuk menu aktif */
+}
+
+.nav-action {
+    display: flex; /* Menggunakan flexbox */
+    align-items: center; /* Rata tengah vertikal */
+    gap: 15px; /* Jarak antar tombol uk 15px */
+}
+
+.theme-toggle {
+    background: none; /* Menghapus backgroundnya default */
+    border: 1px solid var(--border-color); /* Border tipis */
+    border-radius: 20px; /* Sudut membulat */
+    padding: 5px 10px; /* Padding dalam tombol */
+    cursor: pointer; /* Kursor menjadi pointer */
+    color: var(--text-color); /* Warna teks */
+}
+
+.btn-signin {
+    background-color: var(--primary-color); /* Warna backgroundnya oranye */
+    color: white; /* Warna teks putih */
+    border: none; /* Menghapus border */
+    padding: 10px 20px; /* Padding dalam tombol */
+    border-radius: 5px; /* Sudut membulat */
+    cursor: pointer; /* Kursor menjadi pointer */
+    font-weight: bold; /* Teks tebal */
+}
+
+/* === HERO SECTION === */
+.hero-section {
+    display: flex; /* Menggunakan flexbox */
+    justify-content: space-between; /* Menyebar item */
+    align-items: center; /* Rata tengah vertikal */
+    padding: 80px 50px; /* Padding atas-bawah 80px, kiri-kanan  uk 50px */
+    max-width: 1200px; /* Lebar maksimal 1200px */
+    margin: 0 auto; /* Margin otomatis agar tengah */
+}
+
+.hero-content {
+    max-width: 500px; /* Lebar maksimal konten uk 500px */
+}
+
+.hero-content h1 {
+    font-size: 48px; /* Ukuran font judul uk 48px */
+    line-height: 1.2; /* Jarak baris uk 1.2 */
+    margin-bottom: 20px; /* Jarak bawah  uk 20px */
+}
+
+.hero-content p {
+    font-size: 16px; /* Ukuran font  uk 16px */
+    line-height: 1.6; /* Jarak baris uk 1.6 */
+    margin-bottom: 30px; /* Jarak bawah  uk 30px */
+}
+
+.btn-primary {
+    background-color: var(--primary-color); /* Warna backgroundnya oranye */
+    color: white; /* Warna teks ny putih */
+    border: none; /* untuk menghapus border */
+    padding: 15px 30px; /* Padding buat dalam tombol */
+    border-radius: 5px; /* Sudut nya membulat */
+    cursor: pointer; /* Kursor menjadi pointer */
+    font-size: 16px; /* Ukuran font uk 16px */
+    font-weight: bold; /* Teks tebal */
+}
+
+.hero-image img {
+    width: 400px; /* Lebar gambar  uk 400px */
+    border-radius: 10px; /* Sudut membulat */
+}
+
+/* === SECTION UMUM === */
+.section-title {
+    text-align: center; /* Teks rata tengah */
+    margin-bottom: 40px; /* Jarak bawah uk  40px */
+}
+
+.section-title h2 {
+    font-size: 32px; /* Ukuran font  uk 32px */
+    margin-bottom: 10px; /* Jarak bawah 10px */
+}
+
+.section-title p {
+    color: gray; /* Warna teks abu-abu */
+}
+
+/* === GUIDELINES SECTION === */
+.guidelines-section {
+    padding: 80px 50px; /* Padding atas-bawah 80px, kiri-kanan 50px */
+    max-width: 1000px; /* Lebar maksimal 1000px */
+    margin: 0 auto; /* Margin otomatis agar tengah */
+}
+
+.guideline-tabs {
+    display: flex; /* Menggunakan flexbox */
+    justify-content: center; /* Rata tengah horizontal */
+    gap: 30px; /* Jarak antar tab 30px */
+    margin-bottom: 40px; /* Jarak bawah 40px */
+    border-bottom: 1px solid var(--border-color); /* Garis bawah tipis */
+    padding-bottom: 10px; /* Padding bawah  uk 10px */
+}
+
+.guideline-tabs button {
+    background: none; /* Menghapus backgroundnya */
+    border: none; /* Menghapus border */
+    color: var(--text-color); /* Warna teks */
+    font-size: 16px; /* Ukuran font 16px */
+    cursor: pointer; /* Kursor menjadi pointer */
+    padding: 10px 20px; /* Padding dalam tombol */
+}
+
+.guideline-tabs button.active {
+    color: var(--primary-color); /* Warna oranye untuk tab aktif */
+    border-bottom: 2px solid var(--primary-color); /* Garis bawah oranye */
+}
+
+.criteria-grid {
+    display: grid; /* Menggunakan grid layout */
+    grid-template-columns: 1fr 1fr; /* 2 kolom sama besar */
+    gap: 20px; /* Jarak antar kartu 20px */
+    margin-top: 30px; /* Jarak atas 30px */
+}
+
+.criteria-card {
+    background-color: var(--card-bg); /* Warna backgroundnya kartu */
+    padding: 20px; /* Padding dalam kartu */
+    border-radius: 8px; /* Sudut membulat */
+    border: 1px solid var(--border-color); /* Border tipis */
+}
+
+.criteria-card h4 {
+    margin-bottom: 10px; /* Jarak bawah judul 10px */
+    font-size: 18px; /* Ukuran font 18px */
+}
+
+.note {
+    margin-top: 20px; /* Jarak atas 20px */
+    font-size: 14px; /* Ukuran font 14px */
+    font-weight: bold; /* Teks tebal */
+}
+
+/* === FIND YOUR TRACK SECTION === */
+.track-section {
+    padding: 80px 50px; /* Padding atas-bawah 80px, kiri-kanan 50px */
+    max-width: 1000px; /* Lebar maksimal 1000px */
+    margin: 0 auto; /* Margin otomatis agar tengah */
+    text-align: center; /* Teks rata tengah */
+}
+
+.track-tabs {
+    display: flex; /* Menggunakan flexbox */
+    justify-content: center; /* Rata tengah horizontal */
+    gap: 20px; /* Jarak antar tab 20px */
+    margin-bottom: 30px; /* Jarak bawah 30px */
+    border-bottom: 1px solid var(--border-color); /* Garis bawah tipis */
+    padding-bottom: 10px; /* Padding bawah 10px */
+}
+
+.track-tabs button {
+    background: none; /* Menghapus backgroundnya */
+    border: none; /* Menghapus border */
+    color: var(--text-color); /* Warna teks */
+    font-size: 16px; /* Ukuran font 16px */
+    cursor: pointer; /* Kursor menjadi pointer */
+    padding: 10px 20px; /* Padding dalam tombol */
+}
+
+.track-tabs button.active {
+    color: var(--primary-color); /* Warna oranye untuk tab aktif */
+}
+
+.track-badge {
+    display: inline-block; /* Tampil sebagai inline-block */
+    background-color: var(--badge-bg); /* Warna backgroundnya badge */
+    color: var(--badge-text); /* Warna teks badge */
+    padding: 10px 20px; /* Padding dalam badge */
+    border-radius: 5px; /* Sudut membulat */
+    margin-bottom: 30px; /* Jarak bawah 30px */
+    font-size: 14px; /* Ukuran font 14px */
+}
+
+.courses-grid {
+    display: flex; /* Menggunakan flexbox */
+    justify-content: center; /* Rata tengah horizontal */
+    gap: 20px; /* Jarak antar kartu 20px */
+    margin-top: 20px; /* Jarak atas 20px */
+}
+
+.course-card {
+    background-color: var(--card-bg); /* Warna backgroundnya kartu */
+    padding: 20px 40px; /* Padding dalam kartu */
+    border-radius: 8px; /* Sudut membulat */
+    border: 1px solid var(--border-color); /* Border tipis */
+    font-weight: bold; /* Teks tebal */
+}
+
+/* === FAQ SECTION === */
+.faq-section {
+    padding: 80px 50px; /* Padding atas-bawah 80px, kiri-kanan 50px */
+    max-width: 1000px; /* Lebar maksimal 1000px */
+    margin: 0 auto; /* Margin otomatis agar tengah */
+}
+
+.faq-list {
+    display: flex; /* Menggunakan flexbox */
+    flex-direction: column; /* Arah flex kolom */
+    gap: 10px; /* Jarak antar item FAQ 10px */
+}
+
+.faq-item {
+    background-color: var(--faq-bg); /* Warna backgroundnya item FAQ */
+    border-radius: 5px; /* Sudut membulat */
+    overflow: hidden; /* Menyembunyikan konten yang keluar */
+    border: 1px solid var(--border-color); /* Border tipis */
+}
+
+.faq-question {
+    width: 100%; /* Lebar penuh */
+    display: flex; /* Menggunakan flexbox */
+    justify-content: space-between; /* Menyebar item */
+    align-items: center; /* Rata tengah vertikal */
+    padding: 20px; /* Padding dalam tombol */
+    background: none; /* Menghapus backgroundnya */
+    border: none; /* Menghapus border */
+    color: var(--text-color); /* Warna teks */
+    font-size: 16px; /* Ukuran font 16px */
+    text-align: left; /* Teks rata kiri */
+    cursor: pointer; /* Kursor menjadi pointer */
+}
+
+.faq-answer {
+    padding: 0 20px 20px 20px; /* Padding jawaban */
+    font-size: 14px; /* Ukuran font 14px */
+    line-height: 1.6; /* Jarak baris 1.6 */
+    color: gray; /* Warna teks abu-abu */
+}
+
+/* === FOOTER === */
+.footer {
+    display: flex; /* Menggunakan flexbox */
+    justify-content: space-between; /* Menyebar item */
+    padding: 50px; /* Padding dalam footer */
+    background-color: var(--nav-bg); /* Warna backgroundnya footer */
+    border-top: 1px solid var(--border-color); /* Garis atas tipis */
+    margin-top: auto; /* Mendorong footer ke bawah */
+}
+
+.footer-logo img {
+    height: 40px; /* Tinggi logo 40px */
+    margin-bottom: 10px; /* Jarak bawah 10px */
+}
+
+.footer-nav, .footer-social, .footer-contact {
+    display: flex; /* Menggunakan flexbox */
+    flex-direction: column; /* Arah flex kolom */
+    gap: 10px; /* Jarak antar item 10px */
+}
+
+.footer-nav a {
+    color: var(--text-color); /* Warna teks link */
+    text-decoration: none; /* Menghapus garis bawah */
+    font-size: 14px; /* Ukuran font 14px */
+}
+
+.footer-contact p {
+    font-size: 14px; /* Ukuran font 14px */
+    color: gray; /* Warna teks abu-abu */
+}
+
+.social-icons {
+    display: flex; /* Menggunakan flexbox */
+    gap: 15px; /* Jarak antar ikon 15px */
+    font-size: 24px; /* Ukuran ikon 24px */
+    color: var(--primary-color); /* Warna ikon oranye */
+}

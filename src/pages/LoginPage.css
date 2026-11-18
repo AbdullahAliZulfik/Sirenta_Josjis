@@ -1,0 +1,217 @@
+/* === VARIABEL Warnanya (SAMA DENGAN LANDING PAGE) === */
+:root {
+    --bg-color: #0b0b0b; /* Backgroundnya nya gelap */
+    --text-color: #ffffff; /* Teks Warnanya putih */
+    --card-bg: #1a1a1a; /* Backgroundnya kartu gelap */
+    --primary-color: #ff5722; /* Oranye aksen */
+    --border-color: #333333; /* Border gelap */
+    --input-bg: #2a2a2a; /* Backgroundnya input gelap */
+}
+
+.login-wrapper.lightmode {
+    --bg-color: #f9f9f9; /* Backgroundnya terang */
+    --text-color: #333333; /* Teks Warnanya gelap */
+    --card-bg: #ffffff; /* Backgroundnya kartu putih */
+    --border-color: #e0e0e0; /* Border terang */
+    --input-bg: #f0f0f0; /* Backgroundnya input terang */
+}
+
+/* === STYLE DASAR === */
+* {
+    margin: 0; /* Untuk menghapus margin */
+    padding: 0; /* Untuk menghapus padding */
+    box-sizing: border-box; /* Box-sizing border-box */
+    font-family: 'Inter', sans-serif; /* Font Inter */
+}
+
+.login-wrapper {
+    background-color: var(--bg-color); /* Warnanya Backgroundnya */
+    color: var(--text-color); /* Warnanya Teks Warnanya */
+    min-height: 100vh; /* Tinggi minimal layar penuh */
+    display: flex; /* Flexbox */
+    flex-direction: column; /* Arah kolom */
+    transition: background-color 0.3s, color 0.3s; /* Animasi transisi */
+}
+
+.login-top-bar {
+    display: flex; /* Flexbox */
+    justify-content: space-between; /* Mengubah dari flex-end menjadi space-between agar logo di kiri dan toggle di kanan */
+    align-items: center; /* Rata tengah vertikal */
+    padding: 20px 50px; /* Padding */
+}
+
+.login-logo {
+    height: 40px; /* Mengatur tinggi logo agar proporsional */
+}
+
+.theme-toggle {
+    Background: none; /* Tanpa Backgroundnya */
+    border: 1px solid var(--border-color); /* Border */
+    border-radius: 20px; /* Sudut membulat */
+    padding: 5px 10px; /* Padding */
+    cursor: pointer; /* Pointer */
+    color: var(--text-color); /* Warnanya Teks Warnanya */
+}
+
+/* === CONTAINER UTAMA (SPLIT LAYOUT) === */
+.login-container {
+    display: flex; /* Flexbox */
+    flex: 1; /* Mengisi sisa ruang */
+    padding: 0 50px 50px 50px; /* Padding */
+    gap: 50px; /* Jarak antar kolom */
+    max-width: 1200px; /* Lebar maksimal */
+    margin: 0 auto; /* Tengah */
+    width: 100%; /* Lebar penuh */
+}
+
+/* === KOLOM KIRI === */
+.login-left {
+    flex: 1; /* Mengisi setengah ruang */
+    display: flex; /* Flexbox */
+    flex-direction: column; /* Arah kolom */
+    justify-content: center; /* Rata tengah vertikal */
+    align-items: center; /* Rata tengah horizontal */
+    text-align: center; /* Teks Warnanya rata tengah */
+}
+
+.login-illustration img {
+    width: 300px; /* Lebar gambar 300px */
+    border-radius: 10px; /* Sudut membulat */
+    margin-bottom: 20px; /* Jarak bawah 20px */
+}
+
+.login-social {
+    display: flex; /* Flexbox */
+    gap: 15px; /* Jarak antar ikon 15px */
+    font-size: 24px; /* Ukuran ikon */
+    color: var(--primary-color); /* Warnanya oranye */
+    margin-bottom: 30px; /* Jarak bawah 30px */
+}
+
+.login-left h2 {
+    font-size: 28px; /* Ukuran font */
+    margin-bottom: 10px; /* Jarak bawah 10px */
+}
+
+.login-left p {
+    color: gray; /* Warnanya abu-abu */
+    font-size: 14px; /* Ukuran font 14px */
+}
+
+/* === KOLOM KANAN (FORM) === */
+.login-right {
+    flex: 1; /* Mengisi setengah ruang */
+    display: flex; /* Flexbox */
+    justify-content: center; /* Rata tengah horizontal */
+    align-items: center; /* Rata tengah vertikal */
+}
+
+.login-card {
+    background-color: var(--card-bg); /* Warnanya Backgroundnya kartu */
+    padding: 40px; /* Padding dalam kartu */
+    border-radius: 10px; /* Sudut membulat */
+    width: 100%; /* Lebar penuh */
+    max-width: 400px; /* Lebar maksimal 400px */
+    border: 1px solid var(--border-color); /* Bordernya tipis */
+}
+
+.back-btn {
+    Background: none; /* Tanpa Backgroundnya */
+    border: none; /* Tanpa border */
+    color: var(--text-color); /* Warnanya Teks Warnanya */
+    font-size: 20px; /* Ukuran font 20px */
+    cursor: pointer; /* Pointer */
+    margin-bottom: 20px; /* Jarak bawah 20px */
+}
+
+.login-card h1 {
+    font-size: 28px; /* Ukuran font */
+    margin-bottom: 10px; /* Jarak bawah 10px */
+}
+
+.login-card p {
+    color: gray; /* Warnanya abu-abu */
+    font-size: 14px; /* Ukuran font 14px */
+    margin-bottom: 30px; /* Jarak bawah 30px */
+}
+
+/* === FORM GROUP === */
+.form-group {
+    margin-bottom: 20px; /* Jarak bawah 20px */
+}
+
+.form-group label {
+    display: block; /* Tampil sebagai block */
+    font-size: 14px; /* Ukuran font 14px */
+    margin-bottom: 8px; /* Jarak bawah 8px */
+}
+
+.form-group input {
+    width: 100%; /* Lebar penuh */
+    padding: 12px 15px; /* Padding */
+    border-radius: 5px; /* Sudut membulat */
+    border: 1px solid var(--border-color); /* Border tipis */
+    background-color: var(--input-bg); /* Warnanya Backgroundnya input */
+    color: var(--text-color); /* Warnanya Teks Warnanya */
+    font-size: 14px; /* Ukuran font 14px */
+    outline: none; /* Menghilangkan outline default */
+}
+
+.password-input-wrapper {
+    position: relative; /* Posisi relatif untuk tombol mata */
+}
+
+.password-input-wrapper button {
+    position: absolute; /* Posisi absolut */
+    right: 10px; /* Jarak dari kanan 10px */
+    top: 50%; /* Posisi tengah vertikal */
+    transform: translateY(-50%); /* Menggeser ke atas setengah tinggi */
+    Background: none; /* Tanpa Backgroundnya */
+    border: none; /* Tanpa border */
+    cursor: pointer; /* Pointer */
+    color: var(--text-color); /* Warnanya Teks Warnanya */
+}
+
+/* === CLOUDFLARE PLACEHOLDER === */
+.cloudflare-placeholder {
+    background-color: #2a2a2a; /* Backgroundnya gelap */
+    border: 1px solid var(--border-color); /* Border */
+    border-radius: 5px; /* Sudut membulat */
+    padding: 15px; /* Padding */
+    margin-bottom: 20px; /* Jarak bawah 20px */
+}
+
+.cf-content {
+    display: flex; /* Flexbox */
+    justify-content: space-between; /* Menyebar item */
+    align-items: center; /* Rata tengah vertikal */
+    color: #ffffff; /* Teks Warnanya putih */
+    font-size: 14px; /* Ukuran font 14px */
+}
+
+.cf-content small {
+    font-size: 10px; /* Ukuran font kecil */
+    color: gray; /* Warnanya abu-abu */
+}
+
+/* === TOMBOL SUBMIT === */
+.btn-submit {
+    width: 100%; /* Lebar penuh */
+    padding: 15px; /* Padding */
+    background-color: var(--primary-color); /* Warnanya oranye */
+    color: white; /* Teks Warnanya putih */
+    border: none; /* Tanpa border */
+    border-radius: 5px; /* Sudut membulat */
+    font-size: 16px; /* Ukuran font 16px */
+    font-weight: bold; /* Teks Warnanya tebal */
+    cursor: pointer; /* Pointer */
+    margin-bottom: 15px; /* Jarak bawah 15px */
+}
+
+.forgot-password {
+    display: block; /* Tampil sebagai block */
+    text-align: center; /* Teks Warnanya rata tengah */
+    color: #4a90e2; /* Warnanya biru */
+    text-decoration: none; /* Tanpa garis bawah */
+    font-size: 14px; /* Ukuran font 14px */
+}
