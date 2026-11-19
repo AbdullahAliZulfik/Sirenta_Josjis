@@ -105,3 +105,6 @@ CREATE TRIGGER trg_applications_updated_at
 BEFORE UPDATE ON applications
 FOR EACH ROW
 EXECUTE FUNCTION set_updated_at();
+/*npx skills add supabase/agent-skills*/
+/*NEXT_PUBLIC_SUPABASE_URL=https://mgcffqowqgmdimscrrjd.supabase.co
+NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY=sb_publishable_k002G3S9ZMTQunIegiMs5g_WdfHqmHs*/
