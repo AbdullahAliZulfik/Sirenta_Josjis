@@ -296,3 +296,7 @@ EXECUTE FUNCTION set_updated_at();
 -- =========================================================
 -- SELESAI BAGIAN AUTH, PHASES, DAN APPLICATIONS
 -- =========================================================
+--NEXT_PUBLIC_SUPABASE_URL=https://mgcffqowqgmdimscrrjd.supabase.co
+--NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY=sb_publishable_k002G3S9ZMTQunIegiMs5g_WdfHqmHs
+
+--npx skills add supabase/agent-skills
