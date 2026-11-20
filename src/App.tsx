@@ -10,7 +10,7 @@ function App() {
       {halamanSekarang === "landing" ? ( //Kalau sedang di landing page
         <Landingpage navigatelogin={() => sethalamanSekarang("login")} /> //Tampilkan landing page, dan arahkan tombol ke halaman login
       ) : ( //Kalau sedang di halaman login
-        <LoginPage onNavigateBack={() => sethalamanSekarang("landing")} /> //Tampilkan login page, dan arahkan tombol panah kembali ke landing
+        <LoginPage OnNavigateBack={() => sethalamanSekarang("landing")} /> //Tampilkan login page, dan arahkan tombol panah kembali ke landing
       )}
     </>
   );
